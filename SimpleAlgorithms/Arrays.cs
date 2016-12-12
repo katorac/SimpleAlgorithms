@@ -35,7 +35,7 @@ namespace SimpleAlgorithms
             }
 
             Arr = newArr;
-            Console.WriteLine("\n --- All the items reversed --- \n");
+            Console.WriteLine("\n --- All of the items reversed --- \n");
             foreach (var item in Arr)
             {
                 Console.WriteLine(item);

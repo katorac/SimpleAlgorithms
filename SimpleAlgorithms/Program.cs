@@ -41,7 +41,6 @@ namespace SimpleAlgorithms
                         arrayClass.Reverse();
                         break;
                     case "s":
-                        //arrayClass.SortNumbers();
                         Console.WriteLine("Give me some integers. Seperated by spaces");
                         var response = Console.ReadLine().Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
                         arrayClass.SortNumbers(response);
