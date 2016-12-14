@@ -45,5 +45,31 @@ namespace SimpleAlgorithms
                 Console.WriteLine(item);
             }
         }
+
+        public static void MergeLinkedLists(LinkedList<int> l1, LinkedList<int> l2)
+        {
+            Console.WriteLine("\n --- List 1: ---");
+            var list1 = l1.OrderBy(x => x);
+            foreach (var item in list1)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\n --- List 2: ---");
+            var list2 = l2.OrderBy(x => x);
+            foreach (var item in list2)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            var newList = l1.Union(l2).OrderBy(x => x);
+            Console.WriteLine("\n --- Merged list: ---");
+            foreach (var item in newList)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
     }
 }

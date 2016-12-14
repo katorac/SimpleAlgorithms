@@ -35,7 +35,7 @@ namespace SimpleAlgorithms
             }
 
             Arr = newArr;
-            Console.WriteLine("\n --- All the items reversed --- \n");
+            Console.WriteLine("\n --- All of the items reversed --- \n");
             foreach (var item in Arr)
             {
                 Console.WriteLine(item);
@@ -63,5 +63,74 @@ namespace SimpleAlgorithms
                 Console.WriteLine(number);
             }
         }
+
+        public void EvenNumbers(int[] userNumbers)
+        {
+            int total = 0;
+            foreach (var number in userNumbers)
+            {
+                if (number % 2 == 0)
+                {
+                    total += number;
+                    Console.WriteLine($"Even number: {number}");
+                }
+            }
+            Console.WriteLine($"Total of all even numbers: {total}");
+        }
+
+        public void MostCommonNumber(int[] userNumbers)
+        {
+            var d = new Dictionary<int, int>();
+            var biggestKey = 0;
+            var biggestValue = 0;
+
+            foreach (var i in userNumbers)
+            {
+                if (d.ContainsKey(i))
+                {
+                    d[i]++;
+                }
+                else
+                {
+                    d.Add(i,1);
+                }
+            }
+
+            foreach (var item in d)
+            {
+                Console.WriteLine($"{item.Key} appears {item.Value} times");
+
+                if (item.Value > biggestValue)
+                {
+                    biggestKey = item.Key;
+                    biggestValue = item.Value;
+                }
+            }
+
+            Console.WriteLine($"{biggestKey} appears the most: {biggestValue} time");
+
+        }
+
+        public void AnagramReport(string word1, string word2)
+        {
+            var word1Arr = word1.ToLower().ToCharArray();
+            var word2Arr = word2.ToLower().ToCharArray();
+
+            Array.Sort(word1Arr);
+            Array.Sort(word2Arr);
+
+            var newWord1 = new string(word1Arr);
+            var newWord2 = new string(word2Arr);
+
+            if (newWord1 == newWord2)
+            {
+                Console.WriteLine($"Yes {word1} and {word2} are anagrams");
+            }
+            else
+            {
+                Console.WriteLine($"No {word1} and {word2} are NOT anagrams");
+            }
+        }
+
     }
 }
