@@ -18,7 +18,7 @@ namespace SimpleAlgorithms
             while (loopState)
             {
                 Console.WriteLine("\n <=====> \n Navigate by pressing any of the following");
-                Console.WriteLine("\n m : Menu \n q : Quit \n l : Lists \n k : Linked Lists \n y : Merged linked lists \n a : Arrays \n s : Sort an Array \n e : Return even numbers and their sum \n c : Display duplicates in an array\n u : Anagram words\n co : Composition");
+                Console.WriteLine("\n m : Menu \n q : Quit \n l : Lists \n k : Linked Lists \n y : Merged linked lists \n a : Arrays \n s : Sort an Array \n e : Return even numbers and their sum \n c : Display duplicates in an array\n u : Anagram words\n co : Composition\n rs : ReverseString");
                 var navigation = new string[] { "l", "m" };
                 var userInput = Console.ReadLine();
 
@@ -78,6 +78,11 @@ namespace SimpleAlgorithms
 					case "co":
 						var composition = new Composition();
 						composition.Compose();
+						break;
+					case "rs":
+						var stringOperations = new StringOperations();
+						stringOperations.ReverseString();
+						stringOperations.ReverseString("black panther");
 						break;
                     default:
                         Console.WriteLine("Sorry, I don't recognize that command");
