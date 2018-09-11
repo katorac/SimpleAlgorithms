@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleAlgorithms.CustomCollections;
 
 namespace SimpleAlgorithms
 {
@@ -84,6 +85,9 @@ namespace SimpleAlgorithms
 						stringOperations.ReverseString();
 						stringOperations.ReverseString("black panther");
 						break;
+                    case "bst":
+                       BinarySearchTreeOps.Init();
+                       break;;
                     default:
                         Console.WriteLine("Sorry, I don't recognize that command");
                         break;
